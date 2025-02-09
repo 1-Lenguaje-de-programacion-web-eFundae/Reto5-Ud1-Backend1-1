@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+</DOCTYPE>
+<html lang="es-ES">
+
+<head>
+	<title>Solicitar traje samurái a medida</title>
+	<meta charset="UTF-8">
+	<link href="estilos.css" rel="stylesheet" media="all" type="text/css">
+</head>
+
+<body>
+	<main>
+		<header>
+			<h1>Creación de un formulario con validación PHP</h1>
+		</header>
+		<section>
+			<fieldset>
+				<legend><b>Datos del cliente</b></legend>
+				<table>
+					<tr>
+						<td><label for="nombre">Nombre: </label></td>
+						<td><input type="text" name="nombre"></td>
+						<td><label for="altura">Altura: </label></td>
+						<td><input type="number" name="altura"></td>
+						<td><label for="fotoCuerpo">Foto de cuerpo entero: </label></td>
+						<td><input type="file" name="fotoCuerpo"></td>
+					</tr>
+					<tr>
+						<td><label for="apellido1">Primer apellido: </label></td>
+						<td><input type="text" name="apellido1"></td>
+						<td><label for="peso">Peso: </label></td>
+						<td><input type="number" name="peso"></td>
+						<td><label for="direccion">Dirección de envío: </label></td>
+						<td><input type="text" name="direccion"></td>
+					</tr>
+					<tr>
+						<td><label for="apellido2">Segundo apellido: </label></td>
+						<td><input type="text" name="apellido2"></td>
+						<td><label for="anchuraPecho">Anchura de pecho: </label></td>
+						<td><input type="number" name="anchuraPecho"></td>
+						<td><label for="comentarios">Comentarios: </label></td>
+						<td rowspan="2"><textarea name="comentarios"></textarea></td>
+					</tr>
+					<tr>
+						<td><label for="email">Email: </label></td>
+						<td><input type="email" name="email"></td>
+						<td><label for="anchuraCintura">Anchura de cintura: </label></td>
+						<td><input type="number" name="anchuraCintura"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><label for="telefono">Teléfono: </label></td>
+						<td><input type="tel" name="telefono"></td>
+						<td><label for="anchuraCaderas">Anchura de caderas: </label></td>
+						<td><input type="number" name="anchuraCaderas"></td>
+						<td><label for="metodoPago">Método de pago: </label></td>
+						<td id="celdaSelect">
+							<select name="metodoPago" title="Método de pago">
+								<option value="-">-</option>
+								<option value="payPal">Pay-Pal</option>
+								<option value="transferenciaBancaria">Transferencia Bancaria</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+
+				<button name="Enviar" type="submit">Enviar</button>
+			</fieldset>
+		</section>
+	</main>
+</body>
+
+</html>
