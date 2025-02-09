@@ -16,55 +16,57 @@
 		<section>
 			<fieldset>
 				<legend><b>Datos del cliente</b></legend>
-				<table>
-					<tr>
-						<td><label for="nombre">Nombre: </label></td>
-						<td><input type="text" name="nombre"></td>
-						<td><label for="altura">Altura: </label></td>
-						<td><input type="number" name="altura"></td>
-						<td><label for="fotoCuerpo">Foto de cuerpo entero: </label></td>
-						<td><input type="file" name="fotoCuerpo"></td>
-					</tr>
-					<tr>
-						<td><label for="apellido1">Primer apellido: </label></td>
-						<td><input type="text" name="apellido1"></td>
-						<td><label for="peso">Peso: </label></td>
-						<td><input type="number" name="peso"></td>
-						<td><label for="direccion">Dirección de envío: </label></td>
-						<td><input type="text" name="direccion"></td>
-					</tr>
-					<tr>
-						<td><label for="apellido2">Segundo apellido: </label></td>
-						<td><input type="text" name="apellido2"></td>
-						<td><label for="anchuraPecho">Anchura de pecho: </label></td>
-						<td><input type="number" name="anchuraPecho"></td>
-						<td><label for="comentarios">Comentarios: </label></td>
-						<td rowspan="2"><textarea name="comentarios"></textarea></td>
-					</tr>
-					<tr>
-						<td><label for="email">Email: </label></td>
-						<td><input type="email" name="email"></td>
-						<td><label for="anchuraCintura">Anchura de cintura: </label></td>
-						<td><input type="number" name="anchuraCintura"></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td><label for="telefono">Teléfono: </label></td>
-						<td><input type="tel" name="telefono"></td>
-						<td><label for="anchuraCaderas">Anchura de caderas: </label></td>
-						<td><input type="number" name="anchuraCaderas"></td>
-						<td><label for="metodoPago">Método de pago: </label></td>
-						<td id="celdaSelect">
-							<select name="metodoPago" title="Método de pago">
-								<option value="-">-</option>
-								<option value="payPal">Pay-Pal</option>
-								<option value="transferenciaBancaria">Transferencia Bancaria</option>
-							</select>
-						</td>
-					</tr>
-				</table>
+				<form method="POST" action="datos.php">
+					<table>
+						<tr>
+							<td><label for="nombre">Nombre: </label></td>
+							<td class="celdaCampo"><input type="text" name="nombre" required autofocus></td>
+							<td><label for="altura">Altura: </label></td>
+							<td class="celdaCampo"><input type="number" name="altura" required></td>
+							<td><label for="fotoCuerpo">Foto de cuerpo entero: </label></td>
+							<td class="celdaCampo"><input type="file" name="fotoCuerpo" required></td>
+						</tr>
+						<tr>
+							<td><label for="apellido1">Primer apellido: </label></td>
+							<td class="celdaCampo"><input type="text" name="apellido1" required></td>
+							<td><label for="peso">Peso: </label></td>
+							<td class="celdaCampo"><input type="number" name="peso" required></td>
+							<td><label for="direccion">Dirección de envío: </label></td>
+							<td class="celdaCampo"><input type="text" name="direccion" required></td>
+						</tr>
+						<tr>
+							<td><label for="apellido2">Segundo apellido: </label></td>
+							<td class="celdaCampo"><input type="text" name="apellido2" required></td>
+							<td><label for="anchuraPecho">Anchura de pecho: </label></td>
+							<td class="celdaCampo"><input type="number" name="anchuraPecho" required></td>
+							<td><label for="comentarios">Comentarios: </label></td>
+							<td class="celdaCampo" rowspan="2"><textarea name="comentarios" required></textarea></td>
+						</tr>
+						<tr>
+							<td><label for="email">Email: </label></td>
+							<td class="celdaCampo"><input type="email" name="email" required></td>
+							<td><label for="anchuraCintura">Anchura de cintura: </label></td>
+							<td class="celdaCampo"><input type="number" name="anchuraCintura" required></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><label for="telefono">Teléfono: </label></td>
+							<td class="celdaCampo"><input type="tel" name="telefono" required pattern="[0-9]{9}"></td>
+							<td><label for="anchuraCaderas">Anchura de caderas: </label></td>
+							<td class="celdaCampo"><input type="number" name="anchuraCaderas" required></td>
+							<td><label for="metodoPago">Método de pago: </label></td>
+							<td id="celdaSelect" class="celdaCampo">
+								<select name="metodoPago" title="Método de pago" required>
+									<option value="" disabled selected style="display: none;">-</option>
+									<option value="payPal">Pay-Pal</option>
+									<option value="transferenciaBancaria">Transferencia Bancaria</option>
+								</select>
+							</td>
+						</tr>
+					</table>
 
-				<button name="Enviar" type="submit">Enviar</button>
+					<button name="Enviar" type="submit">Enviar</button>
+				</form>
 			</fieldset>
 		</section>
 	</main>

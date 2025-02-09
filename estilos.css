@@ -44,24 +44,48 @@ input {
     border: 1px solid gray;
 }
 
-select{
+input:focus,
+textarea:focus,
+select:focus {
+    background-color: rgb(241, 234, 234);
+}
+
+input[type="email"]:invalid, input[type="tel"]:invalid {
+    border: 2px solid red;
+}
+
+input[type="file"] {
+    background-color: white;
+    padding: 2px;
+}
+
+select {
+    margin-top: 1vh;
     border-radius: 3px;
 }
 
-#celdaSelect{
+table {
+    padding: 1vh 1vw 1vh 1vw;
+}
+
+.celdaCampo {
+    width: 15vw;
+}
+
+#celdaSelect {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
-textarea{
+textarea {
     min-height: 8vh;
     min-width: 17vw;
     margin-bottom: 0.5vh;
     border-radius: 3px;
 }
 
-button{
+button {
     width: 6vw;
     height: 3vh;
     border-radius: 6px;
@@ -71,11 +95,11 @@ button{
     font-weight: normal;
 }
 
-table{
+table {
     margin-bottom: 4vh;
 }
 
-button:hover{
+button:hover {
     background-color: rgb(152, 104, 197);
     color: black;
     font-weight: bold;
