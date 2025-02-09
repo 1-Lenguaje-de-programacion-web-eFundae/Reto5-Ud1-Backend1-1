@@ -50,7 +50,7 @@ select:focus {
     background-color: rgb(241, 234, 234);
 }
 
-input[type="email"]:invalid, input[type="tel"]:invalid {
+input[type="email"]:invalid:not(:placeholder-shown), input[type="tel"]:invalid:not(:placeholder-shown) {
     border: 2px solid red;
 }
 

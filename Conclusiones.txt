@@ -1,0 +1,2 @@
+Select con opción no seleccionable: disabled y display: none
+Borde rojo invalidación salvo campo vacío: no se muestra el placeholder ":not(:placeholder-shown)"
